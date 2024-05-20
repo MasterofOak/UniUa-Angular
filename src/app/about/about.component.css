@@ -1,0 +1,39 @@
+#wrapper {
+    padding: 2em 8em 4em 8em;
+    color: var(--secondary-text-color);
+}
+h1 {
+    text-align: center;
+    letter-spacing: 20px;
+    margin-bottom: 40px;
+}
+h2 {
+    margin-bottom: 20px;
+    margin-left: -40px;
+}
+p {
+    margin: 1em 0;
+    text-align: justify;
+    font-size: 1.25rem;
+    word-break: keep-all;
+    white-space: pre-wrap;
+    text-indent: 40px;
+    word-spacing: 4px;
+    line-height: 1.5;
+}
+ul {
+    text-align: justify;
+    margin: 1.5rem 0;
+    padding: 0 2rem;
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.25rem;
+    font-style: italic;
+    word-break: keep-all;
+    text-indent: 2rem;
+    word-spacing: 4px;
+    line-height: 1.5;
+}
+ul > li {
+    margin: 1rem;
+}

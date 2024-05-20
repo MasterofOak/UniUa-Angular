@@ -1,0 +1,31 @@
+@keyframes appear {
+    0% {
+        left: 200px;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: -200px;
+    }
+}
+#slider {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    filter: blur(2px);
+    transform: scale(1.25);
+    animation: appear 5s ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,19 @@
+<div id="slider" #slider>
+    <div class="slider-item" *ngFor="let article of lastNews">
+        <h2 class="title">{{ article.title.slice(0, -4) }}</h2>
+        <div class="publish-date">
+            {{ article.publishDate }}
+        </div>
+        <div class="learn-more">
+            <button type="button" (click)="showMore(article)">
+                Learn more >>
+            </button>
+        </div>
+    </div>
+</div>
+<span (click)="goLeft(slider)" class="leftArrow material-symbols-outlined"
+    >chevron_left</span
+>
+<span (click)="goRight(slider)" class="rightArrow material-symbols-outlined"
+    >chevron_right</span
+>

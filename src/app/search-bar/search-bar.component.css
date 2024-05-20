@@ -1,0 +1,44 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+form span {
+    position: relative;
+    left: 50px;
+    z-index: 3;
+    opacity: 0;
+    color: var(--secondary-text-color);
+    transition: opacity 0.25s linear;
+}
+form span:has(+ input:focus) {
+    opacity: 1;
+}
+form input {
+    padding: 0 1em;
+    height: 50px;
+    width: 500px;
+    border-radius: 6px;
+    z-index: 2;
+    font-size: 1.25rem;
+    transition: padding-left 0.25s linear;
+}
+input[type='text'] {
+    border: 1px solid var(--acsent-color);
+}
+input[type='text']:focus {
+    outline: 2px solid var(--acsent-color);
+    padding-left: 2.5em;
+}
+form button {
+    font-size: 1.25rem;
+    padding: 0 1em;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid var(--acsent-color);
+    background-color: var(--btn-color);
+    color: var(--main-text-color);
+    cursor: pointer;
+}

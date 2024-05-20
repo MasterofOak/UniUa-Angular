@@ -1,0 +1,61 @@
+<div id="container">
+    <div id="search-wrapper">
+        <app-search-bar></app-search-bar>
+    </div>
+    <div class="results-container">
+        <div
+            class="results-item"
+            *ngFor="let uni of fetchedData; let i = index"
+        >
+            <div class="img-container">
+                <img [src]="returnImage(uni.image)" />
+            </div>
+            <div class="title">
+                <p>{{ uni.name }}</p>
+                <p>Місце знаходження: {{ uni.location }}, Ukraine</p>
+            </div>
+            <div class="info-container">
+                <p>
+                    Веб-сторінка:
+                    <a
+                        [href]="uni.website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >{{ uni.website }}</a
+                    >
+                </p>
+                <p>Вид: {{ uni.type }}</p>
+                <p>Головний напрямок: {{ uni.focus }}</p>
+                <p>
+                    Рейтинг:
+                    <ng-container *ngIf="uni.score === 1">
+                        <span class="material-symbols-outlined"> star </span>
+                    </ng-container>
+                    <ng-container *ngIf="uni.score === 2">
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                    </ng-container>
+                    <ng-container *ngIf="uni.score === 3">
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                    </ng-container>
+                    <ng-container *ngIf="uni.score === 4">
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                    </ng-container>
+                    <ng-container *ngIf="uni.score === 5">
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                        <span class="material-symbols-outlined"> star </span>
+                    </ng-container>
+                    з 5
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
