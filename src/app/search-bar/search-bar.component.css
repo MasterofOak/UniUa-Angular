@@ -5,6 +5,13 @@ form {
     gap: 10px;
     width: 100%;
 }
+form.mobile input{
+  width: 250px;
+  margin-left: -1.5rem;
+}
+form.mobile button{
+  padding: 0 0.5em;
+}
 form span {
     position: relative;
     left: 50px;

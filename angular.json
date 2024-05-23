@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cw_angular:build:production"
+              "buildTarget": "cw_angular:build:production"
             },
             "development": {
-              "browserTarget": "cw_angular:build:development"
+              "buildTarget": "cw_angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cw_angular:build"
+            "buildTarget": "cw_angular:build"
           }
         },
         "test": {

@@ -8,6 +8,23 @@
     padding: 0 2em;
     color: var(--main-text-color);
 }
+#footer-wrapper.mobile {
+    padding: 0;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#footer-wrapper.mobile #logo-container {
+    order: 3;
+}
+#footer-wrapper.mobile #copy {
+    padding-top: 1rem;
+    padding-left: 0;
+    order: 1;
+}
+#footer-wrapper.mobile #socials-container {
+    order: 2;
+}
 #logo img {
     height: 120px;
 }

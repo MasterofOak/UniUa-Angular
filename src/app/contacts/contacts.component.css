@@ -1,7 +1,7 @@
 #wrapper {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     padding: 2em 2em;
     color: var(--secondary-text-color);
 }
@@ -23,6 +23,17 @@ a:hover {
     font-size: 1.5rem;
     padding: 0em 2em;
     flex: 1 auto;
+}
+#contacts_wrapper.mobile {
+    flex-direction: column;
+    font-size: 1.25rem;
+}
+#contacts_wrapper.mobile #contacts .contact {
+    margin: 24px 0;
+}
+.mobile #location-container iframe {
+    width: 75vw;
+    height: 300px;
 }
 #contacts {
     display: flex;

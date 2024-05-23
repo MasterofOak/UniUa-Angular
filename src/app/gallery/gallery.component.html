@@ -1,4 +1,4 @@
-<div id="gallery-wrapper">
+<div id="gallery-wrapper" [ngClass]="{ mobile: isMobile }">
     <div class="gallery-item" *ngFor="let img of galleryImgs">
         <img [src]="img.url" [alt]="img.alt" />
         <p>{{ img.alt }}</p>

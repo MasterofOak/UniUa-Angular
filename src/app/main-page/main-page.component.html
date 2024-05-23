@@ -1,9 +1,12 @@
 <div id="wrapper">
-    <app-background-slider [imageSet]="imageSet"></app-background-slider>
-    <div id="form-container">
+    <app-background-slider
+        [imageSet]="imageSet"
+        [isMobile]="isMobile"
+    ></app-background-slider>
+    <div id="form-container" [ngClass]="{ mobile: isMobile }">
         <h1>Start your exciting student journey with us!</h1>
         <h2>Get all insights about your desired university</h2>
-        <app-search-bar></app-search-bar>
+        <app-search-bar [isMobile]="isMobile"></app-search-bar>
     </div>
     <div id="back-blur"></div>
 </div>

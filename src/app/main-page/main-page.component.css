@@ -20,7 +20,16 @@ h2 {
     width: 75%;
     z-index: 1;
 }
-
+#form-container.mobile {
+    top: 66px;
+    width: 100%;
+}
+.mobile h1,
+h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 32px 0;
+}
 #back-blur {
     position: absolute;
     top: 0;

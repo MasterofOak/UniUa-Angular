@@ -9,7 +9,7 @@ import { News } from '../news';
 })
 export class TrendingNewsComponent {
   @Input() newsData: News[] = [];
-
+  @Input() isMobile: boolean = false;
   constructor(private router: Router) {}
 
   showMore(article: News) {

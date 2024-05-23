@@ -1,4 +1,4 @@
-<div id="slider" #slider>
+<div id="slider" [ngClass]="{ mobile: isMobile }" #slider>
     <div class="slider-item" *ngFor="let article of lastNews">
         <h2 class="title">{{ article.title.slice(0, -4) }}</h2>
         <div class="publish-date">

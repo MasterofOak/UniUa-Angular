@@ -15,7 +15,8 @@ a::after {
 li > a:hover::after {
     transform: scaleX(1);
 }
-#top-bar {
+.top-bar {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -26,15 +27,62 @@ li > a:hover::after {
     height: 80px;
     color: var(--main-text-color);
 }
+.mobile-nav .logo-container p {
+    margin-left: 2px;
+}
+.open-nav-btn {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    z-index: 9999 !important;
+    background-color: transparent;
+}
+.open-nav-btn span {
+    font-size: 2rem;
+    color: var(--main-text-color);
+}
+.hamburger-menu {
+    position: absolute;
+    display: none;
+    touch-action: none;
+}
+.hamburger-menu.open {
+    display: flex;
+    top: 80px;
+    width: 100dvw;
+    min-height: 100dvh;
+    z-index: 9998;
+    background-color: rgba(25, 38, 64, 0.75);
+}
+@keyframes slide_in {
+    0% {
+        left: -250px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+.hamburger-menu ul#menu {
+    position: relative;
+    flex-direction: column;
+    padding-top: 6rem;
+    width: 50%;
+    gap: 60px;
+    z-index: 9999;
+    background-color: #193261;
+    animation: slide_in 0.3s ease-in forwards;
+}
+
 #menu {
     display: flex;
     gap: 40px;
     list-style-type: none;
 }
 #menu > li {
+    text-align: center;
     font-size: 1.5rem;
 }
-.logo-container {
+.logo-container a {
     display: flex;
     align-items: center;
 }

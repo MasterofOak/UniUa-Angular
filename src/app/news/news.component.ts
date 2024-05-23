@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsFetchService } from '../fetch-services/news-fetch.service';
 import { News } from '../news';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-news',
@@ -9,11 +10,22 @@ import { News } from '../news';
 })
 export class NewsComponent implements OnInit {
   fetchedNews: News[] = [];
-  constructor(private NewsFetch: NewsFetchService) {}
+  isMobile: boolean = false;
+  constructor(
+    private NewsFetch: NewsFetchService,
+    private responsive: BreakpointObserver
+  ) {}
   ngOnInit(): void {
     this.NewsFetch.fetchNewsInfo().subscribe((data) => {
       this.fetchedNews = data;
       console.log(this.fetchedNews);
     });
+    this.responsive
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((result) => {
+        if (result.matches) {
+          this.isMobile = true;
+        }
+      });
   }
 }

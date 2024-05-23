@@ -1,4 +1,4 @@
-<div id="slider">
+<div id="slider" [ngClass]="{ mobile: isMobile }">
     <div
         class="image"
         [ngStyle]="{ 'background-image': getCurrentImage() }"

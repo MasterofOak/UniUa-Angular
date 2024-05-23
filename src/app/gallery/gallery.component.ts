@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-gallery',
@@ -7,10 +7,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements OnInit {
+  isMobile: boolean = false;
   ngOnInit(): void {
-    this.http.get('/assets/').subscribe((data) => console.log(data));
+    this.responsive
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((result) => {
+        if (result.matches) {
+          this.isMobile = true;
+        }
+      });
   }
-  constructor(private http: HttpClient) {}
+  constructor(
+    private responsive: BreakpointObserver
+  ) {}
   galleryImgs: any = [
     {
       url: '/assets/gallery/gallery-img-1.jpg',

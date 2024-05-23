@@ -8,6 +8,7 @@ import { ImageSlider } from '../image-slider';
 })
 export class BackgroundSliderComponent implements OnDestroy {
   @Input() imageSet: ImageSlider[] = [];
+  @Input() isMobile: boolean = false;
   ngOnDestroy(): void {
     clearInterval(this.slideShow);
   }

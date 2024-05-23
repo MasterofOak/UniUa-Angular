@@ -1,4 +1,4 @@
-<div id="news-container">
+<div id="news-container" [ngClass]="{ mobile: isMobile }">
     <div class="news-item" *ngFor="let article of newsData">
         <h2 class="title">{{ article.title.slice(0, -4) }}</h2>
         <div class="publish-date">

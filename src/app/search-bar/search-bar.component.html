@@ -1,4 +1,4 @@
-<form>
+<form [ngClass]="{ mobile: isMobile }">
     <span class="material-symbols-outlined"> search </span>
     <input type="text" placeholder="Start typing..." #text />
     <button type="submit" (click)="getData($event, text.value)">Search</button>

@@ -1,4 +1,10 @@
 <div id="wrapper">
-    <app-news-slider [lastNews]="fetchedNews.slice(-5)"></app-news-slider>
-    <app-trending-news [newsData]="fetchedNews"></app-trending-news>
+    <app-news-slider
+        [lastNews]="fetchedNews.slice(-5)"
+        [isMobile]="isMobile"
+    ></app-news-slider>
+    <app-trending-news
+        [newsData]="fetchedNews"
+        [isMobile]="isMobile"
+    ></app-trending-news>
 </div>

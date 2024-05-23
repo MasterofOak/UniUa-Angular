@@ -7,6 +7,14 @@
     gap: 1em;
     padding: 1em 2em;
 }
+#news-container.mobile {
+    grid-template-columns: 1fr;
+    padding: 1em 1em;
+}
+#news-container.mobile > .news-item {
+    grid-column: span 1 !important;
+    height: 200px;
+}
 .news-item {
     display: grid;
     height: 150px;

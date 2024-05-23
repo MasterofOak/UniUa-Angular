@@ -14,6 +14,11 @@
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
+#slider.mobile {
+    height: 300px;
+    grid-auto-columns: 100%;
+    scroll-padding-inline: 2rem;
+}
 .slider-item {
     display: grid;
     grid-template-areas: 'title title' 'date btn';

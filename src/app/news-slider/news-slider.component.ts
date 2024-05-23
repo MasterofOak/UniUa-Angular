@@ -9,14 +9,21 @@ import { Router } from '@angular/router';
 })
 export class NewsSliderComponent {
   @Input() lastNews: any[] = [];
+  @Input() isMobile: boolean = false;
   constructor(private router: Router) {}
   currentIndex: number = 0;
   goRight(slider: Element): void {
-    console.log(slider.scrollLeft);
+    if (this.isMobile) {
+      slider.scrollLeft += 350;
+      return;
+    }
     slider.scrollLeft += 1000;
   }
   goLeft(slider: Element): void {
-    console.log(slider.scrollLeft);
+    if (this.isMobile) {
+      slider.scrollLeft -= 350;
+      return;
+    }
     slider.scrollLeft -= 1000;
   }
   showMore(article: News) {

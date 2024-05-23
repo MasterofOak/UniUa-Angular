@@ -19,7 +19,6 @@ import { BackgroundSliderComponent } from './background-slider/background-slider
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ResultsComponent } from './results/results.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,21 +41,5 @@ import { NewsArticleComponent } from './news-article/news-article.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-//   console.log('Web ' + Breakpoints.Web);
-// console.log('WebLandscape ' + Breakpoints.WebLandscape);
-// console.log('WebPortrait ' + Breakpoints.WebPortrait);
-
-// console.log('Tablet ' + Breakpoints.Tablet);
-// console.log('TabletPortrait ' + Breakpoints.TabletPortrait);
-// console.log('TabletLandscape ' + Breakpoints.TabletLandscape);
-
-// console.log('Handset ' + Breakpoints.Handset);
-// console.log('HandsetLandscape ' + Breakpoints.HandsetLandscape);
-// console.log('HandsetPortrait ' + Breakpoints.HandsetPortrait);
-
-// console.log('XSmall ' + Breakpoints.XSmall);
-// console.log('Small ' + Breakpoints.Small);
-// console.log('Medium ' + Breakpoints.Medium);
-// console.log('Large ' + Breakpoints.Large);
-// console.log('XLarge ' + Breakpoints.XLarge);
+  
 }

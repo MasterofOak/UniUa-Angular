@@ -1,6 +1,6 @@
 <div id="wrapper">
     <h1>CONTACT US</h1>
-    <div id="contacts_wrapper">
+    <div id="contacts_wrapper" [ngClass]="{ mobile: isMobile }">
         <div id="contacts">
             <div class="contact">
                 <span class="material-symbols-outlined"> call </span>
@@ -14,7 +14,7 @@
                 <p>
                     E-mail :
                     <a href="mailto:uniua_support@gmail.com"
-                        >uniua_support@gmail.com</a
+                        >uniua_support&#64;gmail.com</a
                     >
                 </p>
             </div>

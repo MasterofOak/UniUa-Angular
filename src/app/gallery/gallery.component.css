@@ -15,6 +15,16 @@
     grid-auto-flow: dense;
     background: radial-gradient(#ffffff, #f6f6f6);
 }
+#gallery-wrapper.mobile {
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+}
+#gallery-wrapper.mobile .gallery-item {
+    grid-row: span 1 !important;
+    grid-column: span 1 !important;
+    height: var(--local-height);
+    width: var(--local-width);
+}
 .gallery-item {
     height: var(--local-height);
     width: var(--local-width);
