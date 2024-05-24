@@ -7,6 +7,7 @@ import { NewsComponent } from './news/news.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ResultsComponent } from './results/results.component';
 import { NewsArticleComponent } from './news-article/news-article.component';
+import { Page404Component } from './page-404/page-404.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
     component: ResultsComponent,
     title: 'Search Results',
   },
+  { path: '**', component: Page404Component, title: 'Page not found' },
 ];
 
 @NgModule({
