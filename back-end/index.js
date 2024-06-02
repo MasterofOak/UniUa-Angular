@@ -5,14 +5,13 @@ const db = require('better-sqlite3');
 const sqlNews = new db('news.db');
 const sqlUni = new db('universities.db');
 
+sqlUni.pragma('journal_mode = WAL');
+sqlNews.pragma('journal_mode = WAL');
+
 //Express initilazation
 const app = express();
 const PORT = 5000;
-const approvedOrigins = [
-  'http://localhost:4200',
-  'http://localhost:5500',
-  'http://localhost:80',
-];
+const approvedOrigins = ['http://localhost:4200', 'http://localhost:80'];
 const CORSHandler = (req, res, next) => {
   let origin = req.headers.origin;
   if (approvedOrigins.includes(origin)) {
@@ -23,8 +22,6 @@ const CORSHandler = (req, res, next) => {
   }
   next();
 };
-sqlUni.pragma('journal_mode = WAL');
-sqlNews.pragma('journal_mode = WAL');
 
 //Retrive all data from DBs
 const uniData = sqlUni.prepare('select * from university').all();

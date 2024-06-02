@@ -1,3 +1,5 @@
 base64/
 news_article/
 node_modules/
+*.db-shm
+*.db-wal
