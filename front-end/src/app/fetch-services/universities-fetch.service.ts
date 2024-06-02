@@ -8,6 +8,7 @@ import { University } from '../university';
 })
 export class UniversitiesFetchService {
   constructor(private http: HttpClient) {}
+  
   fetchUniInfo(query: string): Observable<University[]> {
     return this.http.get<University[]>(
       `http://localhost:5000/api/universities?name=${query}`
