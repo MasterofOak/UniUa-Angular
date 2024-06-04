@@ -1,0 +1,12 @@
+services:
+    front-end:
+      build: ./front-end
+      stdin_open: true
+      ports:
+        - "80:80"
+      restart: always
+    back-end:
+      build: ./back-end
+      ports:
+        - "5000:5000"
+      restart: always

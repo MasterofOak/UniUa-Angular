@@ -11,7 +11,7 @@ sqlNews.pragma('journal_mode = WAL');
 //Express initilazation
 const app = express();
 const PORT = 5000;
-const approvedOrigins = ['http://localhost:4200', 'http://localhost:80'];
+const approvedOrigins = ['http://localhost:4200', 'http://localhost'];
 const CORSHandler = (req, res, next) => {
   let origin = req.headers.origin;
   if (approvedOrigins.includes(origin)) {
