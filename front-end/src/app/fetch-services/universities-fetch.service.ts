@@ -11,7 +11,7 @@ export class UniversitiesFetchService {
   
   fetchUniInfo(query: string): Observable<University[]> {
     return this.http.get<University[]>(
-      `http://localhost:5000/api/universities?name=${query}`
+      `https://uniua-backend-pmt7anowyq-lm.a.run.app/api/universities?name=${query}`
     );
   }
 }

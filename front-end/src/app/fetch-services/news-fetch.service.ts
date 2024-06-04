@@ -10,6 +10,6 @@ export class NewsFetchService {
   constructor(private http: HttpClient) {}
 
   fetchNewsInfo(): Observable<News[]> {
-    return this.http.get<News[]>('http://localhost:5000/api/news');
+    return this.http.get<News[]>('https://uniua-backend-pmt7anowyq-lm.a.run.app/api/news');
   }
 }
