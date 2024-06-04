@@ -7,8 +7,8 @@ on:
 env:
   PROJECT_ID: uniua-425415
   GAR_LOCATION: europe-central2
-  SERVICE_FRONTEND: uniua-front
-  SERVICE_BACKEND: uniua-back
+  SERVICE_FRONTEND: uniua-frontend
+  SERVICE_BACKEND: uniua-backend
   REGION: europe-central2
   REPO: uniua
 
