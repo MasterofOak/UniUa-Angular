@@ -11,7 +11,7 @@ sqlNews.pragma('journal_mode = WAL');
 //Express initilazation
 const app = express();
 const PORT = 5000;
-const approvedOrigins = ['http://localhost:4200', 'http://localhost'];
+const approvedOrigins = ['http://localhost:4200', 'http://localhost', 'https://uniua-omelchenko.web.app', 'https://uniua-omelchenko.firebaseapp.com'];
 const CORSHandler = (req, res, next) => {
   let origin = req.headers.origin;
   if (approvedOrigins.includes(origin)) {
