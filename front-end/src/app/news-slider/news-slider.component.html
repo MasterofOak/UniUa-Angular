@@ -11,9 +11,9 @@
         </div>
     </div>
 </div>
-<span (click)="goLeft(slider)" class="leftArrow material-symbols-outlined"
+<span (click)="goLeft(slider)" [ngClass]="{ mobile: isMobile }" class="leftArrow material-symbols-outlined"
     >chevron_left</span
 >
-<span (click)="goRight(slider)" class="rightArrow material-symbols-outlined"
+<span (click)="goRight(slider)" [ngClass]="{ mobile: isMobile }" class="rightArrow material-symbols-outlined"
     >chevron_right</span
 >

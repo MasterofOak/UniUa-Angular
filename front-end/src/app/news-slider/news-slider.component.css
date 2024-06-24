@@ -54,7 +54,7 @@
 }
 .rightArrow {
     position: absolute;
-    top: 27%;
+    top: 22.5%;
     transform: translate(0, -50%);
     right: 12px;
     font-size: 45px;
@@ -62,13 +62,19 @@
     z-index: 1;
     cursor: pointer;
 }
+.rightArrow.mobile {
+    top: 27%;
+}
 .leftArrow {
     position: absolute;
-    top: 27%;
+    top: 22.5%;
     transform: translate(0, -50%);
     left: 12px;
     font-size: 45px;
     color: var(--secondary-text-color);
     z-index: 1;
     cursor: pointer;
+}
+.leftArrow.mobile {
+    top: 27%;
 }

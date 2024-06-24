@@ -11,7 +11,12 @@ sqlNews.pragma('journal_mode = WAL');
 //Express initilazation
 const app = express();
 const PORT = 5000;
-const approvedOrigins = ['http://localhost:4200', 'http://localhost', 'https://uniua-omelchenko.web.app', 'https://uniua-omelchenko.firebaseapp.com'];
+const approvedOrigins = [
+  'http://localhost:4200',
+  'http://localhost',
+  'https://uniua-omelchenko.web.app',
+  'https://uniua-omelchenko.firebaseapp.com',
+];
 const CORSHandler = (req, res, next) => {
   let origin = req.headers.origin;
   if (approvedOrigins.includes(origin)) {
@@ -38,7 +43,7 @@ app.get('/', (req, res) => {
 app.get('/api/universities', (req, res) => {
   const query = req.query.name;
   const filteredData = uniData.filter((uni) =>
-    uni.name.toLowerCase().includes(query)
+    uni.name.toLowerCase().includes(query.toLowerCase())
   );
   res.send(filteredData);
 });

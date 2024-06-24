@@ -20,6 +20,9 @@ form span {
     color: var(--secondary-text-color);
     transition: opacity 0.25s linear;
 }
+form.mobile span {
+    left: 25px;
+}
 form span:has(+ input:focus) {
     opacity: 1;
 }
